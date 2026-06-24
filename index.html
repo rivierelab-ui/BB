@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLOBAL BEAUTY - SUMMER EDITORIAL</title>
+  
+  <!-- 보그 감성의 고급스러운 Serif 폰트와 깔끔한 눈에 편한 고딕 폰트 로드 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- CSS 파일 연결 -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. 상단 헤더 영역 -->
+  <header class="vogue-header">
+    <div class="header-top">
+      <p class="subtitle">2026 SUMMER TRENDS / THE FINEST GLOBAL BEAUTY CURATION</p>
+    </div>
+    <h1 class="logo"><a href="#">GLOBAL BEAUTY</a></h1>
+    <nav class="vogue-nav">
+      <ul>
+        <li><a href="#editorial">Editorial</a></li>
+        <li><a href="#suncare">Sun Care</a></li>
+        <li><a href="#makeup">Makeup</a></li>
+        <li><a href="#skincare">Skincare</a></li>
+        <li><a href="#lifestyle">Lifestyle</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 메인 컨텐츠 영역 -->
+  <main class="vogue-container">
+    
+    <!-- 2. 메인 히어로 화보 -->
+    <section class="hero-section">
+      <div class="hero-image-wrapper">
+        <!-- images 폴더 안의 hero.png 지정 -->
+        <img src="images/hero.png" alt="Main Editorial Model">
+      </div>
+      <div class="hero-text">
+        <h2>THE NEW RADIANCE</h2>
+        <p>올여름을 이끄는 투명하고 감각적인 글로우 메이크업 트렌드.</p>
+      </div>
+    </section>
+
+    <!-- 3. 에디토리얼 룩북 섹션 -->
+    <section id="editorial" class="editorial-section">
+      <div class="section-title">
+        <h3>SUMMER LOOKBOOK</h3>
+        <p>빛과 색이 만들어내는 환상적인 여름의 순간들</p>
+      </div>
+      
+      <div class="lookbook-grid">
+        <!-- 룩북 01 -->
+        <div class="lookbook-item">
+          <div class="img-box">
+            <!-- images 폴더 안의 look01.png 지정 -->
+            <img src="images/look01.png" alt="Summer Look 01">
+          </div>
+          <div class="lookbook-desc">
+            <h4>01. SUNSET GLOW</h4>
+            <p>밤하늘의 별빛처럼 은은하게 빛나는 이브닝 메이크업 룩.</p>
+          </div>
+        </div>
+        
+        <!-- 룩북 02 -->
+        <div class="lookbook-item layout-offset">
+          <div class="img-box">
+            <!-- images 폴더 안의 look02.png 지정 -->
+            <img src="images/look02.png" alt="Summer Look 02">
+          </div>
+          <div class="lookbook-desc">
+            <h4>02. GLITTERING DEW</h4>
+            <p>눈가에 흩뿌려진 글리터와 촉촉한 립이 선사하는 신비로운 무드.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 큐레이션 상품 섹션 -->
+    <section class="shop-section">
+      <div class="section-title">
+        <h3>THE ESSENTIALS</h3>
+        <p>패셔너블한 여름 감성을 완성하는 서머 에센셜 큐레이션</p>
+      </div>
+      
+      <div class="product-grid">
+        <!-- 상품 1: 선크림 -->
+        <div id="suncare" class="product-card">
+          <div class="product-img-box">
+            <!-- images 폴더 안의 prod01.png 지정 -->
+            <img src="images/prod01.png" alt="Sun Care">
+          </div>
+          <div class="product-info">
+            <span class="category">SUN CARE</span>
+            <h4 class="brand">SERENE SKY</h4>
+            <p class="name">데일리 하이드레이팅 선크림 SPF50+</p>
+            <p class="price">₩34,000</p>
+          </div>
+        </div>
+
+        <!-- 상품 2: 디올 립 틴트 -->
+        <div id="makeup" class="product-card">
+          <div class="product-img-box">
+            <!-- images 폴더 안의 prod02.webp 지정 -->
+            <img src="images/prod02.webp" alt="Dior Lip Tint">
+          </div>
+          <div class="product-info">
+            <span class="category">MAKEUP</span>
+            <h4 class="brand">DIOR</h4>
+            <p class="name">디올 어딕트 립 틴트 (서머 컬렉션)</p>
+            <p class="price">₩59,000</p>
+          </div>
+        </div>
+
+        <!-- 상품 3: 어반디케이 스프레이 -->
+        <div class="product-card">
+          <div class="product-img-box">
+            <!-- images 폴더 안의 prod03.webp 지정 -->
+            <img src="images/prod03.webp" alt="Urban Decay">
+          </div>
+          <div class="product-info">
+            <span class="category">MAKEUP</span>
+            <h4 class="brand">URBAN DECAY</h4>
+            <p class="name">올나이터 메이크업 세팅 스프레이 듀오</p>
+            <p class="price">₩46,000</p>
+          </div>
+        </div>
+
+        <!-- 상품 4: 라네즈 크림 -->
+        <div id="skincare" class="product-card">
+          <div class="product-img-box">
+            <!-- images 폴더 안의 prod04.jpg 지정 -->
+            <img src="images/prod04.jpg" alt="Laneige Cream">
+          </div>
+          <div class="product-info">
+            <span class="category">SKINCARE</span>
+            <h4 class="brand">LANEIGE</h4>
+            <p class="name">워터뱅크 블루 하이드로 인텐시브 크림</p>
+            <p class="price">₩42,000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 매거진 저널 섹션 -->
+    <section id="lifestyle" class="lifestyle-section">
+      <div class="lifestyle-container">
+        <div class="lifestyle-img-box">
+          <!-- images 폴더 안의 lifestyle.png 지정 -->
+          <img src="images/lifestyle.png" alt="Summer Drinks for Skin">
+        </div>
+        <div class="lifestyle-text-box">
+          <span class="journal-tag">BEAUTY JOURNAL</span>
+          <h3>이너 뷰티: 피부를 위한 여름 음료</h3>
+          <p>여름철 강한 자외선과 더위에 지친 피부 세포를 깨우는 방법. 항산화 성분이 풍부한 라즈베리와 청량한 스파클링이 만나 몸속 깊은 곳부터 생기를 채워주는 특별한 인퓨징 레시피를 제안합니다.</p>
+          <a href="#" class="read-more-btn">READ MORE</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 6. 하단 푸터 영역 (연락처, 가상 이메일, 주소 포함) -->
+  <footer class="vogue-footer">
+    <p class="footer-logo">GLOBAL BEAUTY</p>
+    <div class="footer-info" style="font-size: 12px; line-height: 1.8; color: #888; margin: 15px 0; font-family: 'Noto Sans KR', sans-serif;">
+      <p>고객센터: 02-1234-5678 &nbsp;|&nbsp; 이메일: contact@globalbeauty.com </p>
+      <p>주소: 서울특별시 강남구 테헤란로 123, 글로벌뷰티 타워 5층/p>
+    </div>
+    <p class="copyright">&copy; 2026 GLOBAL BEAUTY ONLINE. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+</body>
+</html>

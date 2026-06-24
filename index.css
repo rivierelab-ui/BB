@@ -1,0 +1,443 @@
+/* 기본 초기화 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 보그 세리프 폰트 전용 공통 클래스 */
+.logo, .hero-text h2, .section-title h3, .brand, .lifestyle-text-box h3, .footer-logo {
+  font-family: 'Cormorant Garamond', 'Didot', 'Bodoni MT', serif;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+/* 1. 상단 헤더 영역 (미니멀 & 패셔너블) */
+.vogue-header {
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px 15px 20px;
+  border-bottom: 1px solid #000000;
+  background-color: #ffffff;
+}
+
+.header-top .subtitle {
+  font-size: 11px;
+  color: #777777;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+}
+
+.vogue-header .logo {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.vogue-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  padding: 15px 0;
+}
+
+.vogue-nav a {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.vogue-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  transition: all 0.3s;
+  transform: translateX(-50%);
+}
+
+.vogue-nav a:hover::after {
+  width: 100%;
+}
+
+/* 레이아웃 중앙 정렬 박스 */
+.vogue-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 타이틀 스타일 */
+.section-title {
+  text-align: center;
+  margin: 120px 0 60px 0;
+}
+
+.section-title h3 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 300;
+}
+
+/* 2. 메인 히어로 배너 (세로형 화보 사진 핏 최적화) */
+.hero-section {
+  margin: 60px auto 120px auto;
+  max-width: 550px;
+  text-align: center;
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.7s ease;
+}
+
+.hero-section:hover .hero-image-wrapper img {
+  transform: scale(1.02);
+}
+
+.hero-text {
+  margin-top: 35px;
+}
+
+.hero-text h2 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: 14px;
+  color: #444444;
+  font-weight: 300;
+}
+
+/* 3. 에디토리얼 룩북 (비대칭 매거진 그리드) */
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* 보그 잡지 특유의 높낮이가 다른 감각적인 비대칭 효과 */
+.lookbook-item.layout-offset {
+  margin-top: 90px;
+}
+
+.lookbook-item .img-box {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+.lookbook-item .img-box img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4; /* 모든 화보 이미지 비율 통일 */
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.lookbook-item:hover .img-box img {
+  transform: scale(1.03);
+}
+
+.lookbook-desc {
+  margin-top: 20px;
+}
+
+.lookbook-desc h4 {
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.lookbook-desc p {
+  font-size: 13px;
+  color: #666666;
+  font-weight: 300;
+}
+
+/* 4. 상품 그리드 영역 (4열 스퀘어 배열) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background-color: #ffffff;
+}
+
+.product-img-box {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 제품 컷은 깔끔한 정정사각형으로 세련되게 통일 */
+  overflow: hidden;
+  background-color: #fcfcfc;
+  border: 1px solid #eeeeee;
+}
+
+.product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.product-card:hover .product-img-box img {
+  opacity: 0.85;
+}
+
+.product-info {
+  padding: 15px 5px;
+}
+
+.product-info .category {
+  font-size: 10px;
+  color: #999999;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.product-info .brand {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.product-info .name {
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 8px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 글씨가 길면 깔끔하게 ... 처리 */
+}
+
+.product-info .price {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 5. 저널 / 라이프스타일 섹션 (가로 분할 슬림 레이아웃) */
+.lifestyle-section {
+  margin: 140px 0;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 60px 0;
+}
+
+.lifestyle-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.lifestyle-img-box {
+  flex: 1;
+  max-width: 450px;
+}
+
+.lifestyle-text-box {
+  flex: 1;
+}
+
+.lifestyle-text-box .journal-tag {
+  font-size: 11px;
+  color: #888888;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.lifestyle-text-box h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.lifestyle-text-box p {
+  font-size: 14px;
+  color: #444444;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.read-more-btn {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 4px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.read-more-btn:hover {
+  color: #777777;
+  border-color: #777777;
+}
+
+/* 6. 푸터 영역 (시크한 블랙 마감) */
+.vogue-footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 120px;
+}
+
+.footer-logo {
+  font-size: 28px;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+}
+
+.vogue-footer .copyright {
+  font-size: 11px;
+  color: #888888;
+  letter-spacing: 0.05em;
+}
+
+/* 📱 반응형 레이아웃 (모바일/태블릿 화면 지원) */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lookbook-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .lookbook-item.layout-offset {
+    margin-top: 0;
+  }
+  .lifestyle-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .vogue-nav ul {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+/* ==========================================
+   5. 매거진 저널 섹션 (프랑스 보그 매거진 스타일)
+   ========================================== */
+.lifestyle-section {
+  padding: 120px 0;          /* 위아래로 넓은 여백을 주어 고급스러운 느낌 강조 */
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.lifestyle-container {
+  max-width: 950px;          /* 사진이 화면에 너무 꽉 차지 않도록 우아한 너비 제한 */
+  width: 100%;
+  display: flex;
+  flex-direction: column;    /* 사진을 위로, 글자를 아래로 나란히 배치 */
+  align-items: center;
+  gap: 50px;                 /* 사진과 아래 글자 사이의 여백 */
+}
+
+.lifestyle-img-box {
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* 아주 은은한 그림자 효과 */
+}
+
+.lifestyle-img-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 글자가 들어가는 텍스트 상자 */
+.lifestyle-text-box {
+  text-align: center;        /* 글자들을 중앙 정렬 */
+  max-width: 680px;          /* 한 줄이 너무 길어지지 않게 가독성 확보 */
+  padding: 0 20px;
+}
+
+/* 상단 작은 태그 */
+.journal-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  text-transform: uppercase; /* 대문자 변환 */
+  letter-spacing: 4px;       /* 자간을 넓게 벌려 매거진 감성 연출 */
+  color: #999999;            /* 세련된 연한 회색 */
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* 메인 제목 */
+.lifestyle-text-box h3 {
+  font-family: 'Cormorant Garamond', 'Noto Sans KR', serif;
+  font-size: 34px;           /* 서체 크기를 키워 시선 집중 */
+  font-weight: 400;          /* 우아하고 얇은 서체 두께 */
+  color: #111111;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+/* 설명 본문 */
+.lifestyle-text-box p {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 300;          /* 얇고 깨끗한 고딕 폰트 */
+  line-height: 1.9;          /* 줄간격을 넓혀 시각적인 편안함 제공 */
+  color: #555555;
+  margin-bottom: 35px;
+  word-break: keep-all;      /* 한글 단어가 어색하게 쪼개지지 않게 방지 */
+}
+
+/* READ MORE 버튼 */
+.read-more-btn {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #111111;
+  text-decoration: none;
+  border-bottom: 1px solid #111111; /* 얇은 밑줄로 보그 매거진 감성 완성 */
+  padding-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  color: #999999;
+  border-bottom-color: #999999;
+}
